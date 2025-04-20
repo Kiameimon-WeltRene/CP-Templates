@@ -1,0 +1,13 @@
+# Ignore build files
+build/
+*.o
+*.out
+
+# Ignore VSCode settings
+.vscode/
+
+# Ignore compiled binaries
+*.exe
+
+# Ignore backups
+*~
