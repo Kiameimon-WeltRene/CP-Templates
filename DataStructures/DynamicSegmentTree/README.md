@@ -1,6 +1,6 @@
 # Dynamic Segment Tree Template
 
-A C++ template implementation of a Dynamic Segment Tree with lazy propagation that supports efficient range queries and range updates with customizable operations. Unlike traditional segment trees, it dynamically allocates nodes only as needed, making it suitable for large index ranges.
+A C++ template implementation of a Dynamic Segment Tree with lazy propagation that supports efficient range queries and range updates with customizable operations. Unlike traditional segment trees, it dynamically allocates nodes only as needed, making it suitable for large index ranges (e.g. up to `1e18`).
 
 ## Features
 
