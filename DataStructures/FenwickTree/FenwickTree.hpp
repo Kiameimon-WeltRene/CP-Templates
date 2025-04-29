@@ -10,13 +10,20 @@ concept Iterator = requires(Iter it) {
     typename std::iterator_traits<Iter>::iterator_category;
 };
 
+// Concept to ensure += and -= are defined
+template <typename T>
+concept HasOp = requires(T a, T b) {
+    { a += b } -> std::same_as<T&>; 
+    { a -= b } -> std::same_as<T&>;
+};
+
 /**
  * Fenwick Tree (also known as a Binary Indexed Tree) implementation.
  * Supports efficient range queries and point updates.
  *
  * @tparam T The type of elements stored in the tree. Must support addition (+) and subtraction (-).
  */
-template <typename T>
+template <HasOp T>
 class FenwickTree {
 public:
     /**

@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <algorithm>
-#include "SegmentTree.hpp"
+#include "../DataStructures/SegmentTree/SegmentTree.hpp"
 
 /**
  * Heavy-Light Decomposition (HLD) implementation.

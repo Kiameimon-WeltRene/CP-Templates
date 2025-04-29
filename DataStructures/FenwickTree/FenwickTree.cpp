@@ -4,7 +4,7 @@
 #include "FenwickTree.hpp"
 
 // Constructor from a range of elements
-template <typename T>
+template <HasOp T>
 template <Iterator Iter>
 FenwickTree<T>::FenwickTree(Iter start, Iter end, T identity)
     : size_(std::distance(start, end) + 1), identity_(identity), data_(size_, identity) {
@@ -20,18 +20,18 @@ FenwickTree<T>::FenwickTree(Iter start, Iter end, T identity)
 }
 
 // Constructor with a given size and identity element
-template <typename T>
+template <HasOp T>
 FenwickTree<T>::FenwickTree(int size, T identity)
     : size_(size + 1), identity_(identity), data_(size_, identity) {}
 
 // Query function
-template <typename T>
+template <HasOp T>
 T FenwickTree<T>::Query(int left, int right) {
     return sum(right) - sum(left);
 }
 
 // Update function
-template <typename T>
+template <HasOp T>
 void FenwickTree<T>::Update(int pos, T value) {
     pos++; // Convert to 1-based indexing
     while (pos < size_) {
@@ -41,7 +41,7 @@ void FenwickTree<T>::Update(int pos, T value) {
 }
 
 // Prefix sum function
-template <typename T>
+template <HasOp T>
 T FenwickTree<T>::sum(int pos) {
     T result = identity_;
     while (pos > 0) {

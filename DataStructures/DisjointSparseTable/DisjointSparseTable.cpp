@@ -14,7 +14,7 @@ DisjointSparseTable<T, op>::DisjointSparseTable(Iter start, Iter end)
 
     int layer = 0, h = 1; // h is the current block size
     while (h < size_) {
-        int left = 0, right = std::min(h - 1, size_ - 1);
+        int left = 0, right = std::min(h, size_) - 1;
 
         // Process each block in the current layer
         while (left < size_) {
