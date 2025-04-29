@@ -4,7 +4,7 @@ A collection of commonly-used data structures and algorithms for competitive pro
 
 ## Structure
 
-### 🔹 Data Structures
+### Data Structures
 - `DisjointSetUnion/` — Union-Find with path compression and union by rank.
 - `DisjointSparseTable/` — Efficient static range queries.
 - `DynamicSegmentTree/` — Segment tree that supports queries over wider ranges (say, more than `5e6`).
@@ -22,9 +22,9 @@ A collection of commonly-used data structures and algorithms for competitive pro
 Each module is split into a header (`.hpp`) and implementation (`.cpp`) file. To use them, simply:
 
 ```cpp
-#include "SegmentTree/SegmentTree.hpp"
+#include "DataStructures/SegmentTree/SegmentTree.hpp"
 // or
-#include "HLD/HLD.hpp"
+#include "Algorithms/HLD/HLD.hpp"
 ```
 
 For each template, you will find a README file describing how to use it, some benchmarks, as well as credits and sources at the bottom for further reading. If you're interested to find out more about a certain data structure, I recommend searching it up on [CodeForces](https://codeforces.com/catalog), [USACO](https://usaco.guide/adv/offline-del?lang=cpp) or [cp-algorithms](https://cp-algorithms.com/).
