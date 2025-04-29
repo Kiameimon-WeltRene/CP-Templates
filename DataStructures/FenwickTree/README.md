@@ -16,15 +16,15 @@ The Fenwick Tree can be initialized in two ways:
 1. **From a range of elements**:
     ```cpp
     std::vector<int> arr = {1, 2, 3, 4, 5};
-    FenwickTree<int> fwt(arr.begin(), arr.end(), 0);
+    FenwickTree<int> fwt(arr.begin(), arr.end(), id);
     ```
     - **Time Complexity**: $O(N \log N)$, where $N$ is the size of the range
     - **Space Complexity**: $O(N)$
-    - **Requirements**: Input iterators (start, end) and an identity element (e.g., 0 for summation)
+    - **Requirements**: Input iterators (start, end) and an identity element (e.g., `0` for summation)
 2. **With a specific size**:
     This fills the entire range with the identity (second argument)
     ```cpp
-    FenwickTree<int> fwt(5, 0);
+    FenwickTree<int> fwt(size, id);
     ```
     - **Time Complexity**: $O(N)$, where $N$ is the size
     - **Space Complexity**: $O(N)$ for storing the data
